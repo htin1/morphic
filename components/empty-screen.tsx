@@ -3,20 +3,20 @@ import { ArrowRight } from 'lucide-react'
 
 const exampleMessages = [
   {
-    heading: 'What is GPT-4o mini?',
-    message: 'What is GPT-4o mini?'
+    heading: 'Where are the configuration files for setting up a Temporal server?',
+    message: 'Where are the configuration files for setting up a Temporal server?'
   },
   {
-    heading: 'Why is Nvidia growing rapidly?',
-    message: 'Why is Nvidia growing rapidly?'
+    heading: 'How is the Workflow Execution started in the Temporal codebase?',
+    message: 'How is the Workflow Execution started in the Temporal codebase?'
   },
   {
-    heading: 'How does the Vercel AI SDK work?',
-    message: 'How does the Vercel AI SDK work?'
+    heading: 'Can you explain the architecture of Temporal?',
+    message: 'Can you explain the architecture of Temporal?'
   },
   {
-    heading: 'Tesla vs Rivian',
-    message: 'Tesla vs Rivian'
+    heading: 'How can I handle timeouts and retries in Temporal?',
+    message: 'How can I handle timeouts and retries in Temporal?'
   }
 ]
 export function EmptyScreen({

@@ -10,7 +10,7 @@ import { CoreMessage, generateId, ToolResultPart } from 'ai'
 import { Spinner } from '@/components/ui/spinner'
 import { Section } from '@/components/section'
 import { FollowupPanel } from '@/components/followup-panel'
-import { inquire, researcher, taskManager, querySuggestor } from '@/lib/agents'
+import { inquire, researcher, taskManager, querySuggestor, retriever } from '@/lib/agents'
 import { writer } from '@/lib/agents/writer'
 import { saveChat } from '@/lib/actions/chat'
 import { Chat } from '@/lib/types'
@@ -159,8 +159,8 @@ async function submit(
     ) {
       // Search the web and generate the answer
       const { fullResponse, hasError, toolResponses, finishReason } =
-        await researcher(uiStream, streamText, messages)
-      stopReason = finishReason || ''
+        await retriever(uiStream, streamText, messages)
+      stopReason = finishReason || 'stop'
       answer = fullResponse
       toolOutputs = toolResponses
       errorOccurred = hasError
